@@ -1,4 +1,3 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
   --main-font: 'Inter';
@@ -7,32 +6,10 @@
   --color: #000;
   --stroke-color: #fff;
   --heart-color: red;
-}
-
-:root.theme-light {
-  --border-color: #000;
-  --bg-color: #d3d3d3;
   --linear-gradient-first: #e7e7e7;
   --linear-gradient-second: #1a1a1a;
-  --accent-color: #000;
   --mix-blend-color: #fff;
-  --border-color: #000;
-  --stroke-color: #fff;
   --header-weight: 700;
   --text-weight: 400;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --border-color: #000;
-    --bg-color: #d3d3d3;
-    --linear-gradient-first: #e7e7e7;
-    --mix-blend-color: #fff;
-    --linear-gradient-second: #1a1a1a;
-    --accent-color: #000;
-    --border-color: #000;
-    --stroke-color: #fff;
-    --header-weight: 700;
-    --text-weight: 400;
-  }
-}
