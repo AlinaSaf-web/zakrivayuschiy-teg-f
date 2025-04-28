@@ -1,7 +1,7 @@
 
 :root {
   --main-font: 'Inter';
-  --accent-font: 'PressStart2P-Regular';
+  --accent-font: 'PressStart2P';
   --bg-color: #fff;
   --color: #000;
   --stroke-color: #fff;
@@ -11,5 +11,21 @@
   --mix-blend-color: #fff;
   --header-weight: 700;
   --text-weight: 400;
+  --bg-image:
+  repeating-linear-gradient(
+    to right,
+    #d3d3d3 0px 2px,
+    transparent 2px 4px
+  ),
+  repeating-linear-gradient(
+    to bottom,
+    #d3d3d3 0px 2px,
+    transparent 2px 4px
+  ),
+  linear-gradient(
+    180deg,
+    #e7e7e7 0.01%,
+    #1a1a1a 100%
+  );
 }
 
