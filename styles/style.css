@@ -12,7 +12,7 @@
 
 @supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
   .card__image-label {
-    text-stroke: 
+    text-stroke:
     1px var(--stroke-color);
     -webkit-text-stroke: 1px var(--stroke-color);
     text-shadow: none;
@@ -24,12 +24,12 @@
   min-block-size: 100dvb;
 
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: 'wght' var(--text-weight); 
+  font-variation-settings: 'wght' var(--text-weight);
 
   background-image: var(--bg-image);
   background-size: cover;
   background-attachment: fixed;
-  padding-bottom: 100px;
+  padding-bottom: 103px;
 }
 
 .header {
@@ -42,8 +42,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 12px;
+  gap: 15px;
+  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 1px;
 
   border: 2px solid var(--color);
   background-color: var(--bg-color);
@@ -63,8 +63,9 @@
 
 .header__description {
   font-family: var(--accent-font), sans-serif;
-  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  margin-block-end: 128px;
+    font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    margin-block-end: 119px;
+    margin-top: 5px;
 }
 
 .card {
@@ -84,6 +85,12 @@
   padding: 5px 22px 5px 8px;
   font-variation-settings: 'wght' var(--header-weight);
   border: 2px solid var(--color);
+  text-align: left;
+  position: relative;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .card__image {
@@ -113,8 +120,9 @@
   color: var(--color);
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  text-shadow: 0 var(--stroke-color), 0 1px var(--stroke-color),
-    0 -1px var(--stroke-color), 1px 0 var(--stroke-color);
+  text-shadow: 0 var(--stroke-color), 0 1px var(--stroke-color), 0 -1px var(--stroke-color), 1px 0 var(--stroke-color);
+  padding-top: 35px; 
+  text-transform: uppercase
 }
 
 .card__content {
@@ -151,22 +159,45 @@
 }
 
 .card__content-text:nth-last-child(2) {
-  margin-block-end: 25px; 
+  margin-block-end: 28px;
 }
 
-.card__like-button {
-  block-size: 38px;
-  inline-size: 130px;
-
+.card__like-button { 
+  block-size: 38px; 
+  inline-size: 130px; 
 }
 
-.card__image {
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 30px;
+  background: var(--bg-color);
+  outline: none;
   position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  font-family: var(--accent-font), sans-serif;
   border: 2px solid var(--color);
-  border-block-start: none;
-  aspect-ratio: 1 / 1;
 }
 
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: var(--color);
+  transition: width 0.5s ease-in-out;
+  inline-size: 100%;
+  block-size: 100%;
+  width: 0;
+}
+
+.button:hover::before {
+  width: 100%;
+}
 
 .button__text {
   font-size: 14px;
@@ -181,12 +212,12 @@
 .dialog__flex {
   display: flex;
   align-items: center;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .floppy-dialog {
-  width: 39px; 
-  height: 39px; 
+  width: 39px;
+  height: 39px;
 }
 
 .dialog__flex-text {
@@ -202,62 +233,11 @@
   line-height: 12.6px;
   padding: 15px 20px;
   margin: 0 auto;
-  color: var(--bg-color)
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-inline: 30px;
-  background: var(--bg-color);
-  outline: none; 
-  position: relative;
-  cursor: pointer;
-  transition: box-shadow 0.3s ease;
-  font-family: var(--accent-font), sans-serif;
-}
-
-.button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  background-color: var(--color);
-  transition:  width 0.5s ease-in-out;
-  inline-size: 100%;
-  block-size: 100%;
-  width: 0;
-}
-
-.button:hover::before {
-width: 100%;
-}
-
-
-.theme-menu__button {
-  font-family: var(--accent-font), sans-serif;
-  border: none;
-  line-height: normal;
-  font-style: normal;
-  font-size: 14px;
-  font-weight: 400;
-  text-transform: uppercase;
-  background-color: transparent;
-  cursor: pointer;
-  padding-inline-start: 27px;
-}
-
-.theme-menu__button:focus-visible,
-.theme-menu__button:focus,
-.button-save:focus,
-.button-save:focus-visible {
-  outline: none;
+  color: var(--bg-color);
 }
 
 .dialog::backdrop {
-  background-color: rgba(0, 0, 0 , 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .dialog {
@@ -296,14 +276,6 @@ width: 100%;
   text-transform: uppercase;
 }
 
-.button_text {
-  font-family: var(--accent-font), sans-serif;
-  mix-blend-mode: difference;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 12.6px;
-}
-
 .card__icon-button {
   border: 2px solid transparent;
   background-color: var(--bg-color);
@@ -313,23 +285,6 @@ width: 100%;
   justify-content: center;
   padding: 0;
   align-items: center;
-}
-
-.button-save::before {
-  content: '';
-  top: 0;
-  left: 0;
-  display: block;
-  transition: width 0.3s ease-in-out;
-  block-size: 100%;
-  inline-size: 100%;
-  width: 0;
-  position: absolute;
-  background-color: var(--color);
-}
-
-.button-save:hover::before {
-  width: 100%;
 }
 
 .floppy-dialog {
@@ -346,22 +301,57 @@ width: 100%;
   max-inline-size: 234px;
 }
 
+h2 {
+  font-family: var(--main-font), sans-serif;
+  font-size: 18px;
+  font-weight: var(--header-weight);
+  line-height: normal;
+  font-style: normal;
+  padding: 5px 22px 5px 8px;
+  font-variation-settings: 'wght' var(--header-weight);
+  border: 2px solid var(--color);
+  text-align: left;
+  position: relative;
+  min-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+}
+
+.floppy {
+  block-size: 21px; 
+  inline-size: 21px; 
+  z-index: 10; 
+  position: relative; 
+  mix-blend-mode: difference; 
+}
 
 @media screen and (width <= 375px) {
   .card__image-label {
-    top: 25px;
-    right: 11px;
+    top: 22px;
+    right: 10px;
   }
-}
 
-@media screen and (width >= 500px) {
-  .floppy {
-    block-size: 21px;
-    inline-size: 21px;
-    z-index: 10;
-    position: relative;
-    mix-blend-mode: difference;
+  .button-remember {
+    background: var(--bg-color);
+    gap: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 12.6px;
+  padding: 15px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   }
+
+  .floppy {
+    block-size: 28px; 
+    inline-size: 28px; 
+  }
+
+  .card__content-text:nth-last-child(2) {
+    margin-block-end: 23px;
+}
 }
 
 @media screen and (width > 375px) {
@@ -369,3 +359,4 @@ width: 100%;
     flex-direction: row;
   }
 }
+

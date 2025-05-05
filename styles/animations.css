@@ -20,7 +20,6 @@
 
 .theme-menu__button:focus-visible {
   opacity: 0.6;
-  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button::after {
@@ -39,7 +38,6 @@
 .theme-menu__button:hover, .theme-menu__button:disabled {
   position: relative;
   opacity: 0.6;
-  transition: opacity 300ms ease;
 }
 
 .theme-menu__button:disabled {
@@ -106,7 +104,6 @@
   transition: fill 0.3s linear 0.06s;
 }
 
-/* Искры */
 .like-icon .sparks {
   opacity: 0;
   fill: var(--heart-color);
