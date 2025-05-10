@@ -118,7 +118,6 @@
   opacity: 0.5;
   mix-blend-mode: hard-light;
   text-shadow: 0 var(--stroke-color), 0 1px var(--stroke-color), 0 -1px var(--stroke-color), 1px 0 var(--stroke-color);
-  padding-top: 35px; 
   text-transform: uppercase
 }
 
@@ -324,8 +323,8 @@ h2 {
   }
 
   .button-remember {
-    background: var(--bg-color);
-    gap: 8px;
+  background: var(--bg-color);
+  gap: 8px;
   font-size: 14px;
   font-weight: 400;
   line-height: 12.6px;
@@ -341,7 +340,11 @@ h2 {
   }
 
   .card__content-text:nth-last-child(2) {
-    margin-block-end: 23px;
+    margin-block-end: 26px;
+}
+
+.card__content-text:nth-child(1) {
+  margin-block-end: 28px;
 }
 }
 

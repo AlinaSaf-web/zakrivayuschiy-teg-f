@@ -54,5 +54,6 @@ ol {
 
 figure {
   margin: 0;
+  position: relative;
 }
 
